@@ -4,8 +4,10 @@ endDate: "2018.12"
 title: "국립중앙도서관 국가서지LOD 서비스"
 skills: ["HTML", "CSS", "Javascript", "Jquery"]
 thumbnail: "./nl_thumb.png"
-link: "https://hellodesign.kr/rto/filelist.html"
-contentImg: "./ori_m.png"
+link: "https://lod.nl.go.kr/"
+contentImg: "./lodi_work.png"
+employment: "(주)리스트"
+notice:
 ---
 
 ## 주요업무

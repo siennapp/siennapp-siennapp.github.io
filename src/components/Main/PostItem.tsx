@@ -2,7 +2,7 @@ import React, { FunctionComponent,  useState, useCallback } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { PostFrontmatterType } from 'types/PostItem.types'
-import Modal from '../Common/Modal'
+import { GatsbyImage} from 'gatsby-plugin-image'
 
 type PostItemProps = PostFrontmatterType & { link: string }
 
@@ -20,6 +20,9 @@ const PostItemWrapper = styled(Link)`
   &:hover {
     transform: translateY(-20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 10px; 
   }
 `
 const ThumbContainer = styled.div`
@@ -51,10 +54,13 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    @media (max-width: 640px) {
+      height: auto;
+    }
 `
 
 const Date = styled.span`
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1em ;
     color: #999999;
     font-family: 'Montserrat', sans-serif;
@@ -63,11 +69,15 @@ const Date = styled.span`
     margin-bottom: 12px; 
 `
 const Title = styled.h2`
-    font-size: 23px;
+    font-size: 1.438rem;
     height: 62px;
-    line-height: 1.348em;
+    line-height: 1.313em;
     letter-spacing: -0.04em;
     margin-bottom: 14px;
+    @media (max-width: 640px) {
+      height: auto;
+      margin-bottom: 30px;
+    }
 `
 const LabelWrap = styled.div`
     width: 100%; 
@@ -84,7 +94,7 @@ const Label = styled.span`
     border-radius: 4px;
     display: inline-block;
     margin-right: 3px;
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 `
@@ -96,13 +106,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
     thumbnail:{publicURL},
     link,
   }) {
-    const [isOpenModal, setOpenModal] = useState<boolean>(false);
-
-    const onClickToggleModal = useCallback(() => {
-      setOpenModal(!isOpenModal);
-    }, [isOpenModal]);
-
-
+    
     return (
         <PostItemWrapper to={link} >
         {/* <PostItemWrapper ={onClickToggleModal} > */}

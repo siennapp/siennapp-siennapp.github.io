@@ -21,14 +21,14 @@ const Wrapper = styled.div`
 `
 
 const SubTitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 `
 
 const Title = styled.div`
   margin-top: 5px;
-  font-size: 42px;
+  font-size: 2.625rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 

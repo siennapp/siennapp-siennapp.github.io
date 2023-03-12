@@ -16,7 +16,7 @@ const defaultStyle = css`
     margin: 0;
     box-sizing: border-box;
     //font-family: 'Montserrat', sans-serif;
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
   html,
@@ -25,11 +25,14 @@ const defaultStyle = css`
     width:100%;
     height: 100%;
     min-height: 700px;
+    font-size: 16px;
+    min-width: 310px;
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'Pretendard';
-    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     word-break: keep-all;
+    color: #333333; 
   }
   a,
   a:hover {
@@ -45,8 +48,9 @@ const defaultStyle = css`
     position: relative; 
     padding: 0 32px;
   }
+
   //swiper css
-  .swiper {
+  /* .swiper {
   width: 100%;
   height: 100%;
 }
@@ -57,10 +61,9 @@ const defaultStyle = css`
   width:40vw !important;
   min-width: 700px;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 25px 15px; 
 
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +81,7 @@ const defaultStyle = css`
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 .info-list svg{
     fill: #49e173 !important;
@@ -89,13 +92,18 @@ const defaultStyle = css`
     padding-bottom: 20px; 
   }
   h2{
-    font-size: 24px; 
+    font-size: 1.5rem; 
     margin-bottom: 20px; 
     font-weight: 600; 
     color: #333333; 
   }
+  hr{
+    background: #e5e5e5;
+  }
   ul{
     list-style: none;
+    position: relative; 
+    left: -5px;
 
     li{
       position: relative; 
@@ -106,12 +114,33 @@ const defaultStyle = css`
         height: 4px; 
         background: #49e173;
         position: absolute;
-        left: -20px;
-        top: 12px;  
+        left: -15px;
+        top: 11px;  
       }
     }
   }
 }
+@media (max-width: 768px) {
+    .container{
+      padding: 0 20px;
+    }
+    html,
+    body,
+    #___gatsby {
+      font-size: 14px !important;
+    }
+    .post-content{
+      > div {
+        padding-bottom: 0px; 
+      }
+      ul{
+        li::before{
+            top: 9px;  
+          }
+        }
+      }
+    }
+  
 `
 
 const GlobalStyle: FunctionComponent = function () {

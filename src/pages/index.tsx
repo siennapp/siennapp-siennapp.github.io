@@ -31,6 +31,11 @@ const ContentSection = styled.div`
     left: 0; top: 0; 
     background: #0b0b1a;
   }
+  @media (max-width: 640px) {
+    &::before{
+      height: 70vw; 
+    }
+  }
 `
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },
@@ -54,7 +59,7 @@ export default IndexPage
 export const getPostList = graphql`
   query getPostList {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [ frontmatter___startDate] }
+      sort: { order: DESC, fields: [ frontmatter___endDate] }
     ) {
       edges {
         node {

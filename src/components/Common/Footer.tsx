@@ -7,7 +7,7 @@ const FooterWrapper = styled.div`
   place-items: center;
   margin-top: auto;
   padding: 20px 0;
-  font-size: 13px;
+  font-size: .813rem;
   text-align: center;
   line-height: 1.5;
 `

@@ -34,7 +34,7 @@ const Background = styled.div`
 const ListTitle = styled.h2`
   padding-left: 30px;
   margin-bottom: 5px; 
-  font-size: 52px;
+  font-size: 3.25rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 `
